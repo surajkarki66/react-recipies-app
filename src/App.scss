@@ -43,3 +43,13 @@ body {
 			"shop-list shop-list shop-list";
 	}
 }
+
+.apistat {
+	grid-area: api-stat;
+	color: $gray-500;
+	font-size: 0.7em;
+
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+}
