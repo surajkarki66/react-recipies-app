@@ -17,3 +17,29 @@ body {
 		background-size: contain;
 	}
 }
+
+.content {
+	border-radius: 5px;
+	height: 95%;
+
+	@include media-breakpoint-down(md) {
+		height: auto;
+	}
+
+	background-color: rgba(255, 255, 255, 0.8);
+	display: grid;
+	justify-items: stretch;
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 70px 1fr;
+	grid-template-areas: "api-stat search likes"
+	"recipe-list recipe shop-list";
+
+	@include media-breakpoint-down(md) {
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-rows: 70px;
+		grid-template-areas:
+			"search search likes"
+			"recipe-list recipe recipe"
+			"shop-list shop-list shop-list";
+	}
+}
